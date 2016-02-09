@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="CustomCellView" id="c22-O7-iKe" customClass="CustomCellView" customModule="ViewBasedTableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yax-OQ-Ylf">
+                    <rect key="frame" x="8" y="16" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="aFu-ZB-gYp"/>
+                        <constraint firstAttribute="width" constant="48" id="y17-ng-fcv"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="FlM-ce-s5P"/>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-gA-Elx">
+                    <rect key="frame" x="62" y="47" width="172" height="17"/>
+                    <textFieldCell key="cell" truncatesLastVisibleLine="YES" sendsActionOnEndEditing="YES" title="Multiline Label" id="Etl-gF-5IM">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aS7-FP-UvW">
+                    <rect key="frame" x="62" y="8" width="172" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Label" id="m5O-yG-bsf">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yax-OQ-Ylf" firstAttribute="centerY" secondItem="c22-O7-iKe" secondAttribute="centerY" id="86R-4Y-c9s"/>
+                <constraint firstAttribute="bottom" secondItem="aS7-FP-UvW" secondAttribute="bottom" constant="8" id="AFg-tx-lpi"/>
+                <constraint firstItem="aS7-FP-UvW" firstAttribute="leading" secondItem="yax-OQ-Ylf" secondAttribute="trailing" constant="8" id="DqB-bi-LxU"/>
+                <constraint firstItem="yax-OQ-Ylf" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="8" id="bdy-Du-o98"/>
+                <constraint firstItem="ibT-gA-Elx" firstAttribute="leading" secondItem="yax-OQ-Ylf" secondAttribute="trailing" constant="8" id="dcU-2s-brC"/>
+                <constraint firstItem="ibT-gA-Elx" firstAttribute="top" secondItem="yax-OQ-Ylf" secondAttribute="top" id="mx5-7x-Dvp"/>
+                <constraint firstAttribute="trailing" secondItem="aS7-FP-UvW" secondAttribute="trailing" constant="8" id="wFW-Mw-18c"/>
+                <constraint firstAttribute="trailing" secondItem="ibT-gA-Elx" secondAttribute="trailing" constant="8" id="yeX-ID-ouQ"/>
+            </constraints>
+            <connections>
+                <outlet property="date" destination="aS7-FP-UvW" id="8dN-G0-Vm4"/>
+                <outlet property="image" destination="yax-OQ-Ylf" id="fYf-qB-kji"/>
+                <outlet property="label" destination="ibT-gA-Elx" id="TEn-b2-RbQ"/>
+            </connections>
+        </customView>
+    </objects>
+</document>
